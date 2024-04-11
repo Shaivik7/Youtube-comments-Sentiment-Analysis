@@ -2,12 +2,13 @@ from googleapiclient.discovery import build
 import pandas as pd
 import spacy
 from spacytextblob.spacytextblob import SpacyTextBlob
+import cred
 
 
 API_key = "AIzaSyD2DjzC68n87LY_my1hyPz031X0rvtOiEI"
 channel_id = "@freecodecamp"
 
-youtube = build("youtube", "v3", developerKey=API_key)
+youtube = build("youtube", "v3", developerKey=cred.API_key)
 
 # Select Playlist and use their playlist IDs to analyze the comments
 playlist_ids = [
